@@ -1,41 +1,46 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import ME from "../public/assets/me.jpeg";
 
-const About = () => {
+const AboutMe = () => {
   return (
-    <div className="w-full md:h-screen p-2 flex items-center py-16">
+    <div id='about' className="w-full md:h-screen p-2 flex items-center py-16">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
-          <p className="uppercase text-xl tracking-widest text-[#5651e5]">
-            {" "}
-            About Me{" "}
+          <h2 className="py-4 tracking-widest text-[#2f4454]"> About Me </h2>
+          <p className="py-2 text-gray-600 text-justify text-lg">
+            Hi! I'm Peter, a software engineering student at the University of
+            Waterloo.
           </p>
-          <h2 className="py-4"> Who I am </h2>
-          <p className="py-2 text-gray-600">
-            {" "}
-            I am passionate about everything in the realm of computer science,
-            robotics and artificial intelligence. I am currently a member of
-            WATonomous working towards designing a level four autonomous vehicle
-            for the University of Waterloo Alternative Fuels Team (UWAFT)
-            competing in the EcoCar Challenge.
+          <p className="py-2 text-gray-600 text-justify text-lg">
+            As a software engineering student, I love exploring the intersection
+            between the fields of computer science and engineering. When I'm not
+            dying from my three weekly quizzes, you can find me divulging myself
+            in autonomous driving publications, solving Kaggle problems and
+            grinding competitive programming problems.
           </p>
-          <p className="py-2 text-gray-600">
-            {" "}
-            In my spare time, you can find me rock climbing with my friends in a
-            match of WeiQi or skateboarding through the night! Feel free to
-            check out my projects and shoot me a message through any of the
-            contact methods below.{" "}
+          <p className="py-2 text-gray-600 text-justify text-lg">
+            Academics aside, you can find me bouldering with my friends, in a
+            match of WeiQi, listening to my beyond depressing spotify playlists
+            or skateboarding through the night! An avid skier during winter and
+            tennis player during the two month of summer in Canada, I am a huge
+            fan of the outdoors and would often go camping with my family and
+            friends. League of Legends is my video-game of choice, feel free to
+            add me <span className="text-[#A68CA4]">@PeteMango</span> and we can
+            play sometimes!
           </p>
-          <p> Check out some of my latest projects. </p>
         </div>
-        <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center jusitify-center p-4 hover:scale-105 ease-in duration-300">
-          <Image src={ME} className="rounded-xl" alt="/" />
+        <div className="w-full h-auto m-auto rounded-xl first-line:flex items-center jusitify-center p-4 hover:scale-105 ease-in duration-300">
+          <img
+            src="../assets/me.jpeg"
+            alt="..."
+            class="shadow-xl rounded-xl max-w-full h-auto align-middle border-none"
+          />
         </div>
       </div>
     </div>
   );
 };
 
-export default About;
+export default AboutMe;

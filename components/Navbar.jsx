@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import React, { useState } from "react";
-import NavLogo from "../public/assets/navLogo.png";
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState, useEffect } from "react";
+import NavLogo from "../public/assets/petemangoLogo.png";
 
 /* Icons Import */
 import { AiOutlineClose, AiOutlineMenu, AiFillMail } from "react-icons/ai";
@@ -10,33 +10,61 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const navbar = () => {
   const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
+
   const handleNav = () => {
     setNav(!nav);
   };
 
+  useEffect(() => {
+    const handleShdow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true)
+      }
+      else {
+        setShadow(false)
+      }
+    }
+    window.addEventListener('scroll', handleShdow)
+  }, [])
+
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]">
+    <div className={shadow? 'fixed w-full h-20 shadow-xl z-[100]':'fixed w-full h-20 z-[100]'}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Image src={NavLogo} alt="/" width="125" height="50" />
-        <div>
+        <Image
+          src={NavLogo}
+          alt="/"
+          width="120"
+          height="120"
+          class="pt-3 scale-150"
+        />
+        <div className="pr-10">
           <ul className="hidden md:flex">
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
-            </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
-            </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
-            </Link>
+            <li className="ml-10 text-sm uppercase hover:border-b">
+              <Link href="/"><span className="text-[#2f4454] text-lg font-medium">Home</span></Link>
+            </li>
+            <li className="ml-10 text-sm uppercase hover:border-b"><Link href="/#about"><span className="text-[#2f4454] text-lg font-medium">About</span>
+              </Link>
+            </li>
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                Projects
+                <span className="text-[#2f4454] text-lg font-medium">
+                  Skills
+                </span>
               </li>
             </Link>
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                Contact
+                <span className="text-[#2f4454] text-lg font-medium">
+                  Projects
+                </span>
+              </li>
+            </Link>
+            <Link href="/">
+              <li className="ml-10 text-sm uppercase hover:border-b">
+                <span className="text-[#2f4454] text-lg font-medium">
+                  Contact
+                </span>
               </li>
             </Link>
           </ul>
@@ -60,7 +88,13 @@ const navbar = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Image src={NavLogo} alt="/" width="87" height="35" />
+              <Image
+                src={NavLogo}
+                alt="/"
+                width="120"
+                height="120"
+                class="pt-10 scale-150"
+              />
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -70,26 +104,48 @@ const navbar = () => {
             </div>
             <div className="border-b border-gray-300 my-4">
               <p className="w-[85%] md:w-[90%] py-4">
-                Let's create something revolutionary together!
+                <span className="text-[#2f4454] text-lg font-medium">
+                  Aspiring Full-Stack Developer
+                </span>
               </p>
             </div>
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
               <Link href="/">
-                <li className="py-4 text-sm">Home</li>
+                <li className="py-4 text-sm">
+                  <span className="text-[#2f4454] text-lg font-medium">
+                    Home
+                  </span>
+                </li>
               </Link>
               <Link href="/">
-                <li className="py-4 text-sm">About</li>
+                <li className="py-4 text-sm">
+                  <span className="text-[#2f4454] text-lg font-medium">
+                    About
+                  </span>
+                </li>
               </Link>
               <Link href="/">
-                <li className="py-4 text-sm">Skills</li>
+                <li className="py-4 text-sm">
+                  <span className="text-[#2f4454] text-lg font-medium">
+                    Skills
+                  </span>
+                </li>
               </Link>
               <Link href="/">
-                <li className="py-4 text-sm">Projects</li>
+                <li className="py-4 text-sm">
+                  <span className="text-[#2f4454] text-lg font-medium">
+                    Projects
+                  </span>
+                </li>
               </Link>
               <Link href="/">
-                <li className="py-4 text-sm">Contact</li>
+                <li className="py-4 text-sm">
+                  <span className="text-[#2f4454] text-lg font-medium">
+                    Contact
+                  </span>
+                </li>
               </Link>
             </ul>
             <div className="pt-40">

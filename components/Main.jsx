@@ -13,7 +13,7 @@ import { RiInstagramFill } from "react-icons/ri";
 const Main = () => {
   return (
     <div className="w-full h-screen text-center">
-      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
+      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center pt-10">
         <div>
           <p className="text-md tracking-widest text-gray-600">
             <Typewriter
@@ -27,16 +27,16 @@ const Main = () => {
             />
           </p>
           <h1 className="py-4 text-gray-700 ">
-            Hey! I'm <span className="text-[#53A2BE]">Peter</span>
+            Hey! I'm <span className="text-[#116466]">Peter</span>
           </h1>
-          <h2 className="py-2 tet-gray-700">Aspiring Full Stack Developer</h2>
-          <p className="py-4 text-gray-600 max-w-[50%] m-auto text-justify leading-7">
-            More commonly known as PeteMango. I am passionate about anything and
+          <h2 className="py-2 tet-gray-700">Aspiring <span className="text-[#1c9b9e]">Full Stack Developer</span></h2>
+          <p className="py-4 text-gray-600 max-w-[54.5%] m-auto text-justify text-lg leading-7">
+            My friends know me as PeteMango, a kid fascinated about anything and
             everything in the field of computer science, engineering and
             mathematics. Passionate about writing code that can change the
             world, I am currently working with Watonomous to design a level four
             autonomous vehicle for the University of Waterloo's Alternative
-            Fuels Team (UWAFT) competing in the EcoCar Challenge.
+            Fuels Team (UWAFT) competing in this year's EcoCar Challenge.
           </p>
           <div className="flex items-center justify-between max-w-[413px] m-auto py-4">
             <a
