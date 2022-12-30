@@ -30,7 +30,7 @@ const Main = () => {
             Hey! I'm <span className="text-[#116466]">Peter</span>
           </h1>
           <h2 className="py-2 tet-gray-700">Aspiring <span className="text-[#1c9b9e]">Full Stack Developer</span></h2>
-          <p className="py-4 text-gray-600 max-w-[54.5%] m-auto text-justify text-lg leading-9">
+          <p className="py-4 text-gray-600 max-w-[54.5%] m-auto text-justify text-lg leading-8">
             My friends know me as <span className="text-[#604f79] font-semibold">PeteMango</span>, a kid fascinated about anything and
             everything in the field of computer science, engineering and
             mathematics. Passionate about writing code that can change the

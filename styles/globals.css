@@ -32,6 +32,12 @@ html {
   h4 {
     @apply text-xl sm:text-2xl
   }
+  /* h5 {
+    @apply text-lg sm:text-xl
+  }
+  h6 {
+    @apply text-base sm:text-lg
+  } */
   li {
     @apply cursor-pointer
   }
