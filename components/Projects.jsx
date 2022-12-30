@@ -13,6 +13,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import { SiDevpost } from "react-icons/si";
+import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
 
 const Projects = () => {
   return (
@@ -87,7 +88,7 @@ const Projects = () => {
           </div>
 
           <div className="rounded-xl hover:scale-105 ease-in duration-300 items-start -mt-20">
-            <Link href="/property">
+            <Link href="">
               <img
                 src="../assets/SE101.jpg"
                 alt="..."
@@ -163,7 +164,7 @@ const Projects = () => {
           </div>
           <div className="py-9 space-y-0">
             <div>
-              <Link href="/property">
+              <Link href="">
                 <img
                   src="../assets/htn2021-1.jpeg"
                   alt="..."
@@ -172,7 +173,7 @@ const Projects = () => {
               </Link>
             </div>
             <div>
-              <Link href="/property">
+              <Link href="">
                 <img
                   src="../assets/htn2021-3.jpeg"
                   alt="..."
@@ -181,7 +182,7 @@ const Projects = () => {
               </Link>
             </div>
             <div>
-              <Link href="/property">
+              <Link href="">
                 <img
                   src="../assets/htn2021-2.jpeg"
                   alt="..."
@@ -191,6 +192,16 @@ const Projects = () => {
             </div>
           </div>
         </div>
+        <div className='flex justify-center py-12'>
+          <Link href='/'>
+              <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                <HiOutlineChevronDoubleUp
+                  className='text-[#116466]'
+                  size={30}
+                />
+              </div>
+          </Link>
+      </div>
       </div>
     </div>
   );

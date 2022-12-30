@@ -18,7 +18,6 @@ export default function Home() {
       <Main />
       <About />
       <Projects />
-
     </div>
   )
 }

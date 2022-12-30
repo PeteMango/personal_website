@@ -5,11 +5,11 @@ import ME from "../public/assets/me.jpeg";
 
 const AboutMe = () => {
   return (
-    <div id='about' className="w-full md:h-screen p-2 flex items-center py-16">
+    <div id='about' className="w-full md:h-screen p-2 flex items-center pt-16">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <h2 className="py-4 tracking-widest text-[#2f4454]"> About Me </h2>
-          <p className="py-2 text-gray-600 text-justify text-lg leading-8">
+          <p className="text-gray-600 text-justify text-lg leading-8">
             Hi! I'm Peter, a software engineering student at the University of
             Waterloo.
           </p>
