@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import NavLogo from "../public/assets/petemangoLogo.png";
 
@@ -19,17 +19,22 @@ const navbar = () => {
   useEffect(() => {
     const handleShdow = () => {
       if (window.scrollY >= 90) {
-        setShadow(true)
+        setShadow(true);
+      } else {
+        setShadow(false);
       }
-      else {
-        setShadow(false)
-      }
-    }
-    window.addEventListener('scroll', handleShdow)
-  }, [])
+    };
+    window.addEventListener("scroll", handleShdow);
+  }, []);
 
   return (
-    <div className={shadow? 'fixed w-full h-20 shadow-xl z-[100]':'fixed w-full h-20 z-[100]'}>
+    <div
+      className={
+        shadow
+          ? "fixed w-full h-20 shadow-xl z-[100]"
+          : "fixed w-full h-20 z-[100]"
+      }
+    >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Image
           src={NavLogo}
@@ -41,28 +46,34 @@ const navbar = () => {
         <div className="pr-10">
           <ul className="hidden md:flex">
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/"><span className="text-[#2f4454] text-lg font-medium">Home</span></Link>
-            </li>
-            <li className="ml-10 text-sm uppercase hover:border-b"><Link href="/#about"><span className="text-[#2f4454] text-lg font-medium">About</span>
+              <Link href="/">
+                <span className="text-[#604f79] text-lg font-medium">Home</span>
               </Link>
             </li>
-            <Link href="/">
+            <li className="ml-10 text-sm uppercase hover:border-b">
+              <Link href="/#about">
+                <span className="text-[#604f79] text-lg font-medium">
+                  About
+                </span>
+              </Link>
+            </li>
+            {/* <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                <span className="text-[#2f4454] text-lg font-medium">
+                <span className="text-[#604f79] text-lg font-medium">
                   Skills
                 </span>
               </li>
-            </Link>
-            <Link href="/">
+            </Link> */}
+            <Link href="/#projects">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                <span className="text-[#2f4454] text-lg font-medium">
+                <span className="text-[#604f79] text-lg font-medium">
                   Projects
                 </span>
               </li>
             </Link>
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                <span className="text-[#2f4454] text-lg font-medium">
+                <span className="text-[#604f79] text-lg font-medium">
                   Contact
                 </span>
               </li>
@@ -104,7 +115,7 @@ const navbar = () => {
             </div>
             <div className="border-b border-gray-300 my-4">
               <p className="w-[85%] md:w-[90%] py-4">
-                <span className="text-[#2f4454] text-lg font-medium">
+                <span className="text-[#604f79] text-lg font-medium">
                   Aspiring Full-Stack Developer
                 </span>
               </p>
@@ -114,35 +125,35 @@ const navbar = () => {
             <ul className="uppercase">
               <Link href="/">
                 <li className="py-4 text-sm">
-                  <span className="text-[#2f4454] text-lg font-medium">
+                  <span className="text-[#604f79] text-lg font-medium">
                     Home
                   </span>
                 </li>
               </Link>
               <Link href="/">
                 <li className="py-4 text-sm">
-                  <span className="text-[#2f4454] text-lg font-medium">
+                  <span className="text-[#604f79] text-lg font-medium">
                     About
                   </span>
                 </li>
               </Link>
-              <Link href="/">
+              {/* <Link href="/">
                 <li className="py-4 text-sm">
-                  <span className="text-[#2f4454] text-lg font-medium">
+                  <span className="text-[#604f79] text-lg font-medium">
                     Skills
                   </span>
                 </li>
-              </Link>
+              </Link> */}
               <Link href="/">
                 <li className="py-4 text-sm">
-                  <span className="text-[#2f4454] text-lg font-medium">
+                  <span className="text-[#604f79] text-lg font-medium">
                     Projects
                   </span>
                 </li>
               </Link>
               <Link href="/">
                 <li className="py-4 text-sm">
-                  <span className="text-[#2f4454] text-lg font-medium">
+                  <span className="text-[#604f79] text-lg font-medium">
                     Contact
                   </span>
                 </li>
